@@ -1,0 +1,272 @@
+body {
+	background: black;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+
+}
+a {
+	color: white;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+	transform: scale(1.25);
+}
+.em{
+	font-weight: 400;
+	font-style: italic;
+}
+
+
+.fullBg{
+	background: url("../images/tele_bg_s.jpg") center center no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+}
+
+
+header{
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(0,0,0,.85);
+	transition: all 0.25s ease-in-out;
+	z-index: 101;
+}
+nav{
+	display: grid;
+	grid-template-rows: 5fr 0fr 1fr;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	max-height: 120px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1em 0;
+}
+.section_links{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-around;
+	line-height: 50px;
+}
+.nav_link {
+	cursor: pointer;
+	color: rgba(255,255,255,1);
+	transition: all 0.25s ease-in-out;
+}
+.nav_link:hover{
+	transition: all 0.25s ease-in-out;
+	transform: scale(1.25);
+}
+
+
+.logo{
+	background: url("../images/maco_logo_white.svg") center center no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	transition: all 0.25s ease-in-out;
+}
+.logo:hover{
+	transition: all 0.25s ease-in-out;
+	transform: scale(1.25);
+}
+
+
+
+section{
+	position: relative;
+	text-align: left;
+	min-height: 100vh;
+	width: 100%;
+	z-index: 100;
+	padding: 152px 0;
+	margin-bottom: 100vh;
+}
+section:nth-of-type(odd), section:nth-of-type(1){
+	color: #333;
+	background: rgba(255,255,255,.85);
+}
+section:nth-of-type(odd) h2{
+	font-weight: 100;
+	padding-bottom: .5em;
+	border-bottom: 2px solid rgba(0,0,0,.85);
+}
+section:nth-of-type(1){
+	padding: 1em 0;
+	margin-top: 152px;
+}
+section:nth-of-type(even){
+	color: white;
+	font-size: 1.5em;
+	background: rgba(0,0,0,.85);
+}
+section:nth-of-type(even) h2{
+	font-weight: 100;
+	padding-bottom: .5em;
+	border-bottom: 2px solid rgba(255,255,255,.85);
+}
+section:last-of-type{
+	margin-bottom: 0;
+}
+
+
+
+#hero .content{
+	font-size: 1.5em;
+	text-align: center;
+}
+#hero .content h2{
+	margin-top: 4em;
+	border: 0px;
+}
+#hero .content h3{
+	font-weight: 100;
+}
+#hero .content span{
+	font-style: italic;
+	font-size: .75em;
+}
+
+
+.content{
+	position: relative;
+	margin: 0 auto;
+	width: calc(90% - 1em);
+	font-size: 1.25em;
+	padding: .5em;
+	text-align: justify;
+}
+
+
+.photos{
+	display: grid;
+	grid-gap: 1em 1em;
+	justify-content: space-between;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+}
+.photos a{
+	color: #333;
+}
+.photo{
+	min-height: 200px;
+	background: rgba(0,0,0,.5);
+	border: 1px solid rgba(0,0,0,.5);
+}
+
+
+footer{
+	position: relative;
+	width: 100%;
+	min-height: 30px;
+	padding: 2em 0;
+	text-align: center;
+	background: rgba(0,0,0,.5);
+	z-index: 100;
+}
+footer .links{
+	font-size: 2em;
+	margin-bottom: .5em;
+	line-height: 30px;
+}
+.links a{
+	margin: 0 .5em;
+}
+.links a:hover{
+	cursor: pointer;
+	font-size: 1.25em;
+}
+footer .sub{
+	font-size: .8em;
+	color: white;
+}
+
+
+/* active styles */
+
+/* MODAL */
+
+#modalBG{
+	display: grid;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.9);
+	grid-template: 1fr 1fr;
+	justify-content: center;
+	align-content: center;
+	z-index: 110;
+	color: #333;
+}
+.modal{
+	position: relative;
+	width: 100%;
+	height: 50vh;
+	background: rgba(255,255,255,1);
+	border: 1px solid rgba(255,255,255,.5);
+	padding: 1em;
+}
+#closeModal{
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+
+@media screen and (min-width: 450px) {
+	.fullWrap{
+		background: url("../images/tele_bg.jpg") center center no-repeat;
+		background-size: cover;
+	}
+	nav{
+		width: 70%;
+		grid-template-columns: 1fr 7fr 4fr;
+	}
+	section{
+		padding: 92px 0;
+		font-size: 1.25em;
+	}
+	section:nth-of-type(1){
+		margin-top: 92px;
+	}
+	.content{
+		position: relative;
+		margin: 0 auto;
+		width: 70%;
+		font-size: 1.5em;
+		padding: 1em;
+		text-align: left;
+	}
+	.photos{
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+	footer{
+		min-height: 100px;
+	}
+	.modal{
+		width: 25vw;
+		height: 25vh;
+		padding: 2em;
+	}
+	#closeModal{
+		top: 0;
+		right: 0;
+	}
+}
