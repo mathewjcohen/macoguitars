@@ -1,7 +1,7 @@
-const state = {
-  // modalVisible: 0,
-  // modalEl: document.getElementById("modalBG"),
-};
+// const state = {
+//   // modalVisible: 0,
+//   // modalEl: document.getElementById("modalBG"),
+// };
 
 // modal logic
 // document.getElementById("customForm").addEventListener("click", toggleModal);
@@ -21,4 +21,15 @@ const state = {
 // TODO: add custom build form and validate
 // function validateForm() {}
 
-// scroll to top
+var nav = document.getElementsByTagName("nav")[0];
+var about = document.getElementById("about");
+var photos = document.getElementById("photos");
+var custom = document.getElementById("custom");
+
+function scrollToEl(el) {
+  window.scrollTo({
+    top: el.offsetTop - nav.offsetHeight,
+    left: 0,
+    behavior: "smooth"
+  });
+}

@@ -106,31 +106,15 @@ section{
 	min-height: 100vh;
 	width: 100%;
 	z-index: 100;
-	padding: 152px 0;
 	margin-bottom: 100vh;
-}
-section:nth-of-type(odd), section:nth-of-type(1){
+	scroll-behavior: smooth;
 	color: rgba(0,0,0,.75);
 	background: rgba(255,255,255,.85);
 }
-section:nth-of-type(odd) h2{
+section h2{
 	font-weight: 100;
 	padding-bottom: .5em;
 	border-bottom: 2px solid rgba(0,0,0,.5);
-}
-section:nth-of-type(1){
-	padding: 1em 0;
-	margin-top: 152px;
-}
-section:nth-of-type(even){
-	color: white;
-	font-size: 1.5em;
-	background: rgba(0,0,0,.85);
-}
-section:nth-of-type(even) h2{
-	font-weight: 100;
-	padding-bottom: .5em;
-	border-bottom: 2px solid rgba(255,255,255,.5);
 }
 section:last-of-type{
 	margin-bottom: 0;
@@ -263,16 +247,17 @@ footer .sub{
 @media screen and (min-width: 768px) {
 	blockquote {
 		margin: 2em 2em;
+		font-family: 'Poiret One', cursive;
 	}
 	nav{
 		width: 90%;
 		grid-template-columns: 1fr 7fr 4fr;
 	}
 	section{
-		padding: 92px 0;
+		/* padding: 92px 0; */
 		font-size: 1.25em;
 	}
-	section:nth-of-type(1){
+	section{
 		margin-top: 92px;
 	}
 	.content{
@@ -286,7 +271,7 @@ footer .sub{
 	.about_content img{
 		float: left;
 		margin: 0 1em 1em 0;
-		width: 35%;
+		width: 40%;
 	}
 	.photos{
 		grid-template-rows: 1fr 1fr 1fr;
@@ -317,5 +302,10 @@ footer .sub{
 	}
 	.content{
 		width: 70%;
+	}
+	.drop_cap:first-letter{
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-size: 4em;
+		float: left;
 	}
 }

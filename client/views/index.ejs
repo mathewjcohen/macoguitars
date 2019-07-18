@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -22,17 +26,33 @@
     <header>
       <nav>
         <div class="logo"></div>
-        <div></div>
+        <div class="hamburger">
+          <div class="ham1"></div>
+          <div class="ham2"></div>
+          <div class="ham3"></div>
+        </div>
         <div class="section_links">
-          <span class="nav_link"><a href="#top">About</a></span>
-          <span class="nav_link"><a href="#photos">Photos</a></span>
-          <span class="nav_link"><a href="#custom">Custom</a></span>
+          <span id="about_link" class="nav_link" onclick="scrollToEl(about)">
+            About
+          </span>
+          <span id="photos_link" class="nav_link" onclick="scrollToEl(photos)">
+            Photos
+          </span>
+          <span id="custom_link" class="nav_link" onclick="scrollToEl(custom)">
+            Custom
+          </span>
         </div>
       </nav>
     </header>
 
     <!-- <section id="hero">
-      <div class="content"></div>
+      <div class="content">
+        <h4 class="em">
+          <blockquote>
+            "If you really love a guitar, it just sounds better."
+          </blockquote>
+        </h4>
+      </div>
 		</section> -->
 
     <section id="about">
@@ -40,27 +60,35 @@
         <h2>About MaCo Guitars</h2>
         <h4 class="em">
           <blockquote>
-            "It is the little things that make big things happen."
+            "A unique vehicle for your musical expression."
+            <!-- "It is the little things that make big things happen." -->
           </blockquote>
         </h4>
         <div class="about_content">
           <img src="images/1.jpg" alt="1" />
-          <p>
-            My name is Mathew Cohen - A tinkerer, builder, woodworker, and maker
-            of things.
+          <p class="">
+            My name is Mathew Cohen - a tinkerer, builder, woodworker, maker of
+            things - and MaCo Guitars was born of my love for music.
           </p>
           <p>
             With over 20 years of experience as a touring musician and recording
             engineer, I know what it takes to sound great on stage and in the
-            studio. This is why I use the best domestic and exotic woods,
-            electronics, and materials available to build one of a kind
-            instruments.
+            studio.
           </p>
           <p>
-            I make a very limited number of instruments annually, allowing a
-            detailed focus toward creating a unique vehicle for your musical
-            expression. Not a single instrument leaves my shop without meeting
-            my high standards.
+            Carefully crafted, I design and build each instrument to give the
+            player complete control of their sonic landscape while looking
+            absolutely stunning. In making a high quality, custom instrument it
+            only makes sense that each one is comprised of the best domestic and
+            exotic woods, electronics, and materials available.
+          </p>
+          <p>
+            To acheieve the level of craftsmanship I strive for, I make a
+            limited number of instruments each year. Doing so allows absolute
+            focus and attention to detail while creating a unique vehicle for
+            your musical expression. Because it is the little things that make
+            big things happen, not a single instrument leaves my shop without
+            meeting my high standards and desire to deliver beyond expectations.
           </p>
         </div>
       </div>
@@ -93,11 +121,6 @@
     <section id="custom">
       <div class="content">
         <h2>Instrument Order Form</h2>
-        <h4 class="em">
-          <blockquote>
-            "If you really love a guitar, it just sounds better."
-          </blockquote>
-        </h4>
         <p>Coming Soon!</p>
         <p>
           Feel free to send me an email to get started on your dream instrument!
@@ -126,5 +149,6 @@
         Any unauthorized use is prohibited.
       </div>
     </footer>
+    <script src="/client/static/js/funStuff.js"></script>
   </body>
 </html>
