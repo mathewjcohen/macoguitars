@@ -75,6 +75,7 @@ nav{
 	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: space-around;
 	line-height: 50px;
+	grid-row: 3/4;
 }
 .nav_link {
 	cursor: pointer;
@@ -92,6 +93,7 @@ nav{
 	background-size: contain;
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
+	grid-row: 1/2;
 }
 .logo:hover{
 	transition: all 0.25s ease-in-out;
@@ -266,8 +268,18 @@ footer .sub{
 		font-family: 'Poiret One', cursive;
 	}
 	nav{
-		width: 90%;
 		grid-template-columns: 1fr 7fr 4fr;
+	}
+	.logo{
+		grid-column: 1/2;
+		grid-row: auto;
+	}
+	.section_links{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-content: space-around;
+		grid-row: auto;
+		grid-column: 3/4;
 	}
 	section{
 		font-size: 1.25em;
