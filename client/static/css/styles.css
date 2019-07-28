@@ -38,10 +38,21 @@ blockquote {
   margin: 2em 1.5em;
 	color: rgba(0,0,0,.65);
 	text-align: center;
+	font-family: 'Poiret One', cursive;
 }
-
+.four0four{
+	height: auto;
+}
+.four0four a{
+	color: rgba(0,0,0,.85);
+	transition: all .3s ease-in-out;
+}
+.four0four a:hover{
+	font-size: 2em;
+	transition: all .3s ease-in-out;
+}
 .fullBg{
-	background: url("../images/tele_bg_s.jpg") center center no-repeat;
+	background: url("../images/guitars/small/pegasus/8.jpg") center center no-repeat;
 	background-size: cover;
 	height: 100vh;
 	width: 100vw;
@@ -70,12 +81,19 @@ nav{
 	margin: 0 auto;
 	padding: 1em 0;
 }
+nav:nth-child(1){
+	min-height: 5em;
+}
 .section_links{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
 	justify-content: space-around;
 	line-height: 50px;
 	grid-row: 3/4;
+}
+nav.firstFive > .section_links{
+	grid-template-columns: repeat(5, 1fr);
+	justify-content: space-around;
 }
 .nav_link {
 	cursor: pointer;
@@ -95,6 +113,11 @@ nav{
 	transition: all 0.25s ease-in-out;
 	grid-row: 1/2;
 }
+.logo a{
+	height: 100%;
+	width: 100%;
+	outline: 1px solid red;
+}
 .logo:hover{
 	transition: all 0.25s ease-in-out;
 	transform: scale(1.25);
@@ -102,7 +125,7 @@ nav{
 
 
 
-section{
+section, #hero{
 	position: relative;
 	text-align: left;
 	min-height: 100vh;
@@ -120,7 +143,8 @@ section:nth-of-type(odd) h2{
 	padding-bottom: .5em;
 	border-bottom: 2px solid rgba(0,0,0,.5);
 }
-section:nth-of-type(1){
+section:nth-of-type(1),
+#hero{
 	padding: 1em 0;
 	margin-top: 152px;
 }
@@ -139,10 +163,29 @@ section:last-of-type{
 }
 
 
+#hero{
+	padding: 1em 0;
+	margin-top: 152px;
+	color: rgba(255,255,255,.75);
+}
+#hero h2{
+	font-weight: 100;
+	padding-bottom: .5em;
+	border-bottom: 2px solid rgba(0,0,0,.5);
+}
+#hero blockquote {
+	display: block;
+	font-size: 1.25em;
+  margin: 2em 1.5em;
+	color: rgba(255,255,255,.9);
+	text-align: center;
+}
 
-/* #hero .content{
+#hero .content{
 	font-size: 1.5em;
 	text-align: center;
+	max-height: 100vh;
+	z-index: 3;
 }
 #hero .content h2{
 	margin-top: 4em;
@@ -154,13 +197,40 @@ section:last-of-type{
 #hero .content span{
 	font-style: italic;
 	font-size: .75em;
-} */
+}
+#hero #hero1, #hero #hero2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("/images/guitars/large/andromeda/3.jpg");
+}
+#hero #hero1{
+	z-index: 2;
+	background-image: url("/images/guitars/large/hera/2.jpg");
+}
+
+.sale-message{
+	font-size: .75em;
+	font-weight: bold;
+	margin-top: 25vh;
+	font-family: 'Poiret One', cursive;
+	text-transform: uppercase;
+	padding: 1em 0;
+	border: 1px solid rgba(255,255,255,.75);
+	background: rgba(0,0,0,.5);
+}
 
 
 .content{
 	position: relative;
 	margin: 0 auto;
-	width: calc(90% - 1em);
+	width: calc(95% - 1em);
 	font-size: 1.25em;
 	padding: .5em;
 	text-align: justify;
@@ -199,6 +269,40 @@ section:last-of-type{
   -webkit-background-clip: text;
 }
 
+.guitar_container{
+	display: grid;
+	grid-template-columns: 1fr;
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	border-bottom: 2px solid rgba(0,0,0,.5);
+}
+.sold{
+	color: rgb(165, 20, 20);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .75em;
+}
+.guitar_container > .guitar_info h2{
+	font-size: 2em;
+	border: 0px;
+	margin-bottom: 0;
+}
+.guitar_info{
+	font-size: .85em;
+}
+.guitar_photos_container{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-content: space-around;
+}
+.guitar_photos_container img{
+	width: auto;
+	max-width: 100%;
+	margin: 1em 0;
+	cursor: zoom-in;
+}
+
 
 footer{
 	position: relative;
@@ -230,59 +334,76 @@ footer .sub{
 /* active styles */
 
 /* MODAL */
-
 #modalBG{
 	display: grid;
 	visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100vh;
+	width: calc(100% - 4em);
+	height: calc(100vh - 4em);
 	background: rgba(0,0,0,.9);
 	grid-template: 1fr 1fr;
 	justify-content: center;
 	align-content: center;
 	z-index: 110;
 	color: rgba(0,0,0,.75);
+	cursor: zoom-out;
+	padding: 2em;
 }
-.modal{
-	position: relative;
+#modalImg{
 	width: 100%;
-	height: 50vh;
-	background: rgba(255,255,255,1);
-	border: 1px solid rgba(255,255,255,.75);
-	padding: 1em;
-}
-#closeModal{
-	position: absolute;
-	left: 0;
-	top: 0;
-	cursor: pointer;
+	height: auto;
 }
 
-/* phone */
+.show {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+
+/* tablet */
 @media screen and (min-width: 768px) {
 	blockquote {
 		margin: 2em 2em;
 		font-family: 'Poiret One', cursive;
 	}
 	nav{
-		grid-template-columns: 1fr 7fr 4fr;
+		grid-template-columns: 2fr 4fr 6fr;
+	}
+	nav:nth-child(1){
+		min-height: auto;
 	}
 	.logo{
 		grid-column: 1/2;
+		justify-content: center;
 		grid-row: auto;
 	}
 	.section_links{
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		justify-content: space-around;
 		grid-row: auto;
 		grid-column: 3/4;
 	}
+	nav.firstFive > .section_links{
+		grid-template-columns: repeat(6, 1fr);
+	}
 	section{
 		font-size: 1.25em;
+	}
+	section:nth-of-type(1),
+	#hero{
+		margin-top: 92px;
+	}
+	.sale-message{
+		font-size: 1em;
+		margin-top: calc(68vh - 100px);
 	}
 	.content{
 		position: relative;
@@ -301,6 +422,19 @@ footer .sub{
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-columns: 1fr 1fr;
 	}
+	.guitar_info{
+		padding-right: 1em;
+	}
+	.guitar_container{
+		grid-template-columns: 1fr;
+	}
+	.guitar_photos_container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.guitar_photos_container img{
+		max-width: 300px;
+		padding: 0 1em;
+	}
 	footer{
 		min-height: 100px;
 	}
@@ -318,21 +452,35 @@ footer .sub{
 /* desktop */
 @media screen and (min-width: 1024px){
 	.fullWrap{
-		background: url("../images/tele_bg.jpg") center center no-repeat;
+		background: url("../images/guitars/large/pegasus/8.jpg") center center no-repeat;
 		background-size: cover;
 	}
 	nav{
-		width: 70%;
-	}
-	section:nth-of-type(1){
-		margin-top: 92px;
+		width: 80%;
 	}
 	.content{
-		width: 70%;
+		width: 80%;
 	}
 	.drop_cap:first-letter{
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: 4em;
 		float: left;
+	}
+	.guitar_container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.guitar_info{
+		align-content: flex-start;
+	}
+	.guitar_photos_container{
+		padding-top: 1em;
+		grid-template-columns: repeat(3, 1fr);
+		align-content: flex-start;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.guitar_photos_container img{
+		max-width: 182px;
+		padding: 0 1em;
 	}
 }

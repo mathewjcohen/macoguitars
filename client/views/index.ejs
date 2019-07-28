@@ -18,14 +18,14 @@
       href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <div class="fullBg"></div>
 
     <header>
       <nav>
-        <div class="logo"></div>
+        <a href="/" class="logo"></a>
         <div class="section_links">
           <span id="about_link" class="nav_link" onclick="scrollToEl(about)">
             About
@@ -40,15 +40,22 @@
       </nav>
     </header>
 
-    <!-- <section id="hero">
-      <div class="content">
-        <h4 class="em">
-          <blockquote>
-            "If you really love a guitar, it just sounds better."
-          </blockquote>
-        </h4>
-      </div>
-		</section> -->
+    <div id="hero">
+      <a href="/founders-sale/first-five">
+        <div id="hero1"></div>
+        <div id="hero2"></div>
+        <div class="content">
+          <h4 class="em">
+            <blockquote>
+              "If you really love a guitar, it just sounds better."
+            </blockquote>
+          </h4>
+          <div class="sale-message">
+            click to view guitars for sale
+          </div>
+        </div>
+      </a>
+    </div>
 
     <section id="about">
       <div class="content">
@@ -60,7 +67,7 @@
           </blockquote>
         </h4>
         <div class="about_content">
-          <img src="images/1.jpg" alt="1" />
+          <img src="/images/guitars/small/casseopeia/7.jpg" alt="Casseopeia" />
           <p class="">
             My name is Mathew Cohen - a tinkerer, builder, woodworker, maker of
             things - and MaCo Guitars was born of my love for music.
@@ -128,6 +135,8 @@
       </div>
     </section>
 
+    <%- include modal.ejs %>
+
     <footer>
       <div class="links">
         <a href="mailto:maco.guitars@gmail.com" target="_blank">
@@ -145,5 +154,6 @@
       </div>
     </footer>
     <script src="/client/static/js/funStuff.js"></script>
+    <script src="/client/static/js/heroFader.js"></script>
   </body>
 </html>
