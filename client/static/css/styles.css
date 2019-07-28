@@ -491,4 +491,11 @@ footer .sub{
 		justify-items: stretch;
 		align-items: stretch;
 	}
+	.gtr_th{
+		transition: all .3s ease-in-out;
+	}
+	.gtr_th:hover{
+		transform: scale(1.05);
+		transition: all .3s ease-in-out;
+	}
 }
