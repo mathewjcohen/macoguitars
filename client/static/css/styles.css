@@ -135,8 +135,7 @@ section, #hero{
 	min-height: 100vh;
 	width: 100%;
 	z-index: 100;
-	padding-bottom: 1em;
-	/* margin-bottom: 100vh; */
+	padding-bottom: 3em;
 }
 section:nth-of-type(odd), section:nth-of-type(1){
 	color: rgba(0,0,0,.75);
@@ -246,18 +245,16 @@ section:last-of-type{
 
 .photos{
 	display: grid;
-	grid-gap: 1em 1em;
-	justify-content: space-between;
+	grid-row-gap: 1em;
+	justify-content: center;
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr;
 }
 .photos a{
 	color: rgba(0,0,0,.75);
 }
-.photo{
-	min-height: 200px;
-	background: rgba(0,0,0,.5);
-	border: 1px solid rgba(0,0,0,.5);
+.photos img{
+	max-width: 100%;
 }
 .insta_link{
 	border-radius: 5px;
@@ -296,14 +293,15 @@ section:last-of-type{
 }
 .guitar_photos_container{
 	display: grid;
+	grid-row-gap: 1em;
 	grid-template-columns: 1fr;
-	justify-items: center;
+	justify-content: center;
+	justify-items: stretch;
+	align-items: stretch;
 	align-content: space-around;
 }
 .guitar_photos_container img{
-	width: auto;
 	max-width: 100%;
-	margin: 1em 0;
 	cursor: zoom-in;
 }
 
@@ -424,8 +422,15 @@ footer .sub{
 		width: 40%;
 	}
 	.photos{
-		grid-template-rows: 1fr 1fr 1fr;
-		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+		justify-content: center;
+		justify-items: stretch;
+		align-items: stretch;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.photos img{
+		cursor: zoom-in;
 	}
 	.guitar_info{
 		padding-right: 1em;
@@ -434,11 +439,11 @@ footer .sub{
 		grid-template-columns: 1fr;
 	}
 	.guitar_photos_container{
+		grid-gap: 1em;
+		justify-content: center;
+		justify-items: stretch;
+		align-items: stretch;
 		grid-template-columns: repeat(2, 1fr);
-	}
-	.guitar_photos_container img{
-		max-width: 300px;
-		padding: 0 1em;
 	}
 	footer{
 		min-height: 100px;
@@ -462,6 +467,16 @@ footer .sub{
 		font-size: 4em;
 		float: left;
 	}
+	.photos{
+		justify-content: center;
+		justify-items: stretch;
+		align-items: stretch;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.photos img{
+		cursor: zoom-in;
+	}
 	.guitar_container{
 		grid-template-columns: 1fr;
 	}
@@ -471,12 +486,9 @@ footer .sub{
 	.guitar_photos_container{
 		padding-top: 1em;
 		grid-template-columns: repeat(5, 1fr);
-		align-content: flex-start;
-		align-items: flex-start;
-		justify-content: space-between;
-	}
-	.guitar_photos_container img{
-		max-width: 200px;
-		padding: 0 1em;
+		grid-gap: 1em;
+		justify-content: center;
+		justify-items: stretch;
+		align-items: stretch;
 	}
 }
