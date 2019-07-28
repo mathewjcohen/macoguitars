@@ -19,6 +19,9 @@ a:hover {
 	transition: all 0.25s ease-in-out;
 	transform: scale(1.25);
 }
+em{
+	font-family: 'Poiret One', cursive;
+}
 .em{
 	font-weight: 100;
 	font-style: italic;
@@ -92,6 +95,7 @@ nav:nth-child(1){
 	grid-row: 3/4;
 }
 nav.firstFive > .section_links{
+	font-size: .75em;
 	grid-template-columns: repeat(5, 1fr);
 	justify-content: space-around;
 }
@@ -392,6 +396,7 @@ footer .sub{
 		grid-column: 3/4;
 	}
 	nav.firstFive > .section_links{
+		font-size: 1em;
 		grid-template-columns: repeat(6, 1fr);
 	}
 	section{
@@ -438,15 +443,6 @@ footer .sub{
 	footer{
 		min-height: 100px;
 	}
-	.modal{
-		width: 25vw;
-		height: 25vh;
-		padding: 2em;
-	}
-	#closeModal{
-		top: 0;
-		right: 0;
-	}
 }
 
 /* desktop */
@@ -467,20 +463,20 @@ footer .sub{
 		float: left;
 	}
 	.guitar_container{
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 	}
 	.guitar_info{
 		align-content: flex-start;
 	}
 	.guitar_photos_container{
 		padding-top: 1em;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 		align-content: flex-start;
 		align-items: flex-start;
 		justify-content: space-between;
 	}
 	.guitar_photos_container img{
-		max-width: 182px;
+		max-width: 200px;
 		padding: 0 1em;
 	}
 }
