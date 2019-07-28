@@ -1,3 +1,6 @@
+*{
+	transition: all .3s ease-in-out;
+}
 body {
 	background: black;
 	padding: 0;
@@ -48,11 +51,9 @@ blockquote {
 }
 .four0four a{
 	color: rgba(0,0,0,.85);
-	transition: all .3s ease-in-out;
 }
 .four0four a:hover{
 	font-size: 2em;
-	transition: all .3s ease-in-out;
 }
 .fullBg{
 	background: url("../images/guitars/small/pegasus/8.jpg") center center no-repeat;
@@ -407,6 +408,11 @@ footer .sub{
 	.sale-message{
 		font-size: 1em;
 		margin-top: calc(68vh - 100px);
+
+	}
+	.sale-message:hover{
+		transform: scale(1.05);
+
 	}
 	.content{
 		position: relative;
@@ -492,10 +498,10 @@ footer .sub{
 		align-items: stretch;
 	}
 	.gtr_th{
-		transition: all .3s ease-in-out;
+
 	}
 	.gtr_th:hover{
 		transform: scale(1.05);
-		transition: all .3s ease-in-out;
+
 	}
 }
