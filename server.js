@@ -14,9 +14,6 @@ app.set("view engine", "ejs");
 app.get("/client/static/js/funStuff.js", function(req, res) {
   res.sendFile(path.join(__dirname + "/client/static/js/funStuff.js"));
 });
-app.get("/client/static/js/heroFader.js", function(req, res) {
-  res.sendFile(path.join(__dirname + "/client/static/js/heroFader.js"));
-});
 
 var routes_setter = require("./server/config/routes.js");
 routes_setter(app);
