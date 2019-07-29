@@ -6,10 +6,10 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
+	font-display: swap;
 	font-size: 16px;
 	text-align: center;
 	color: white;
-
 }
 a {
 	color: white;
@@ -24,6 +24,7 @@ a:hover {
 }
 em{
 	font-family: 'Poiret One', cursive;
+	font-display: swap;
 }
 .em{
 	font-weight: 100;
@@ -224,6 +225,7 @@ section:last-of-type{
 	font-weight: bold;
 	margin-top: 25vh;
 	font-family: 'Poiret One', cursive;
+	font-display: swap;
 	text-transform: uppercase;
 	padding: 1em 0;
 	border: 1px solid rgba(255,255,255,.75);
@@ -375,6 +377,7 @@ footer .sub{
 	blockquote {
 		margin: 2em 2em;
 		font-family: 'Poiret One', cursive;
+		font-display: swap;
 	}
 	nav{
 		grid-template-columns: 2fr 4fr 6fr;
@@ -470,6 +473,7 @@ footer .sub{
 	}
 	.drop_cap:first-letter{
 		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		font-display: swap;
 		font-size: 4em;
 		float: left;
 	}

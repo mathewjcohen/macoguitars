@@ -18,7 +18,13 @@
       href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preload" href="/css/styles.css" as="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
     <div class="fullBg"></div>
@@ -66,7 +72,11 @@
           </blockquote>
         </h4>
         <div class="about_content">
-          <img src="/images/guitars/small/casseopeia/7.jpg" alt="Casseopeia" />
+          <img
+            loading="lazy"
+            src="/images/guitars/small/casseopeia/7.jpg"
+            alt="Casseopeia"
+          />
           <p class="">
             My name is Mathew Cohen - a tinkerer, builder, woodworker, maker of
             things - and MaCo Guitars was born of my love for music.
