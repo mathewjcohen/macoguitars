@@ -471,12 +471,6 @@ footer .sub{
 	.content{
 		width: 80%;
 	}
-	.drop_cap:first-letter{
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-		font-display: swap;
-		font-size: 4em;
-		float: left;
-	}
 	.photos{
 		justify-content: center;
 		justify-items: stretch;
