@@ -40,7 +40,7 @@
   <body>
     <div class="fullBg"></div>
 
-    <header>
+    <header id="header">
       <nav>
         <a href="/" class="logo"></a>
         <div class="section_links">
@@ -53,26 +53,23 @@
           <span id="custom_link" class="nav_link" onclick="scrollToEl(custom)">
             Custom
           </span>
+          <a
+            href="https://www.instagram.com/macoguitars"
+            class="nav_link insta_link"
+            target="_blank"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://www.reverb.com/shop/macoguitars"
+            class="nav_link reverb_link"
+            target="_blank"
+          >
+            Reverb
+          </a>
         </div>
       </nav>
     </header>
-
-    <div id="hero">
-      <a href="/founders-sale">
-        <div id="hero1"></div>
-        <div id="hero2"></div>
-        <div class="content">
-          <h4 class="em">
-            <blockquote>
-              "If you really love a guitar, it just sounds better."
-            </blockquote>
-          </h4>
-          <div class="sale-message">
-            click to view guitars for sale
-          </div>
-        </div>
-      </a>
-    </div>
 
     <section id="about">
       <div class="content">
@@ -119,23 +116,6 @@
     <section id="photos">
       <div class="content">
         <h2>Photos</h2>
-        <p>
-          <a
-            class="insta_link"
-            href="https://www.instagram.com/macoguitars"
-            target="_blank"
-          >
-            @macoguitars
-          </a>
-          on
-          <a
-            class="insta_link"
-            href="https://www.instagram.com/macoguitars"
-            target="_blank"
-          >
-            <i class="fa fa-instagram"></i> Instagram
-          </a>
-        </p>
         <div class="photos">
           <img
             loading="lazy"
@@ -262,9 +242,7 @@
           <i class="fa fa-instagram"></i>
         </a>
       </div>
-      <div class="sub">
-        &copy; MaCo Guitars, 2019. All rights reserved.
-      </div>
+      <div id="dateCopyright" class="sub"></div>
       <div class="sub">
         Any unauthorized use is prohibited.
       </div>

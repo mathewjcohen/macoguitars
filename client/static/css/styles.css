@@ -73,13 +73,17 @@ blockquote {
   top: 0px;
   z-index: 1;
 }
-
-header {
+#header {
   margin: 0 auto;
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    140deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(0, 0, 0, 0.75) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
   transition: all 0.25s ease-in-out;
   z-index: 101;
 }
@@ -134,7 +138,6 @@ nav.firstFive > .section_links {
   transition: all 0.25s ease-in-out;
   transform: scale(1.25);
 }
-
 section,
 #hero {
   position: relative;
@@ -144,6 +147,9 @@ section,
   z-index: 100;
   padding-bottom: 3em;
 }
+/* #about {
+  margin-top: 92px;
+} */
 section:nth-of-type(odd),
 section:nth-of-type(1) {
   color: rgba(0, 0, 0, 0.75);
@@ -157,7 +163,6 @@ section:nth-of-type(odd) h2 {
 #firstFivePhotos,
 #hero {
   padding: 1em 0;
-  margin-top: 152px;
 }
 section:nth-of-type(even) {
   color: white;
@@ -264,8 +269,6 @@ section:last-of-type {
   max-width: 100%;
 }
 .insta_link {
-  border-radius: 5px;
-  padding: 0.1em 0.25em;
   background: -webkit-linear-gradient(
     45deg,
     rgba(195, 42, 163, 1) 0%,
@@ -289,6 +292,12 @@ section:last-of-type {
   );
   background-clip: text;
   -webkit-background-clip: text;
+}
+.reverb_link {
+  color: #f6870f;
+}
+.reverb_link:hover {
+  color: #444;
 }
 
 .guitar_container {
@@ -407,7 +416,7 @@ footer .sub {
   }
   .section_links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-around;
     grid-row: auto;
     grid-column: 3/4;
