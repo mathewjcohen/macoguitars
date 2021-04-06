@@ -17,10 +17,12 @@ const state = {
 })();
 
 window.onscroll = function() {
-  if (document.documentElement.scrollTop > header.offsetHeight / 2) {
+  if (document.documentElement.scrollTop > header.offsetHeight) {
     header.style.position = "fixed";
+    about.style.paddingTop = `${header.offsetHeight}px`;
   } else {
     header.style.position = "relative";
+    about.style.paddingTop = "0px";
   }
 };
 // modal logic
