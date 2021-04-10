@@ -27,11 +27,14 @@ a {
 a:hover {
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  transform: scale(1.25);
 }
 em {
   font-family: "Poiret One", cursive;
   font-display: swap;
+}
+h3 {
+  font-weight: 100;
+  font-size: 0.75em;
 }
 .em {
   font-weight: 100;
@@ -89,7 +92,7 @@ blockquote {
 }
 nav {
   display: grid;
-  grid-template-rows: 5fr 0fr 1fr;
+  grid-template-rows: 6fr 0fr 1fr;
   grid-template-columns: 1fr;
   justify-content: center;
   max-height: 120px;
@@ -255,18 +258,28 @@ section:last-of-type {
   max-width: 100%;
 }
 
-.photos {
+.photos,
+.for-sale-photos {
   display: grid;
   grid-row-gap: 1em;
   justify-content: center;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
 }
-.photos a {
+.photos a,
+.for-sale-photos a {
   color: rgba(0, 0, 0, 0.75);
 }
-.photos img {
+.photos img,
+.for-sale-photos img {
   max-width: 100%;
+}
+.for-sale-photos,
+.for-sale-photos a {
+  color: white;
+}
+.for-sale-photos p {
+  font-size: 1.4rem;
 }
 .insta_link {
   background: -webkit-linear-gradient(
@@ -416,7 +429,7 @@ footer .sub {
   }
   .section_links {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-content: space-around;
     grid-row: auto;
     grid-column: 3/4;
@@ -455,7 +468,8 @@ footer .sub {
     margin: 0 1em 1em 0;
     width: 40%;
   }
-  .photos {
+  .photos,
+  .for-sale-photos {
     grid-gap: 1em;
     justify-content: center;
     justify-items: stretch;
@@ -497,7 +511,8 @@ footer .sub {
   .content {
     width: 80%;
   }
-  .photos {
+  .photos,
+  .for-sale-photos {
     justify-content: center;
     justify-items: stretch;
     align-items: stretch;
