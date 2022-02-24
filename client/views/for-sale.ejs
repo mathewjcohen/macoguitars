@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="A custom-made, unique vehicle for your musical expression."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MaCo Guitars" />
+    <meta
+      property="og:description"
+      content="A custom-made, unique vehicle for your musical expression."
+    />
+    <meta property="og:url" content="http://www.macoguitars.com/" />
+    <meta property="og:site_name" content="MaCo Guitars" />
+    <meta
+      property="og:image"
+      content="http://www.macoguitars.com/images/guitars/small/casseopeia/2.jpg"
+    />
+    <title>MaCo Guitars</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link
+      rel="style"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap"
+      rel="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
+      rel="style"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles-l.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <a href="/" class="logo"></a>
+        <div class="section_links">
+          <%- include nav.ejs %>
+        </div>
+      </nav>
+    </header>
+
+    <section id="forSale">
+      <div class="content">
+        <h2>For Sale</h2>
+        <div class="for-sale-content">
+          Guitars Currently Available:
+        </div>
+        <p>
+          <a href="https://reverb.com/shop/macoguitars" target="_blank">
+            <img
+              src="http://images.reverb.com/image/upload/shop-button-large-og_hgxmsd.png"
+              alt="MaCo GUitars on Reverb"
+            />
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <% include footer.ejs %>
+    <script src="/client/static/js/funStuff.js"></script>
+  </body>
+</html>

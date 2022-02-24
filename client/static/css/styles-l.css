@@ -1,0 +1,44 @@
+/* tablet */
+@media screen and (min-width: 768px) {
+  blockquote {
+    margin: 2em 2em;
+    font-family: "Poiret One", cursive;
+    font-display: swap;
+  }
+  nav {
+    grid-template-columns: 2fr 4fr 6fr;
+  }
+  nav:nth-child(1) {
+    min-height: auto;
+  }
+  .logo {
+    grid-column: 1/2;
+    justify-content: center;
+    grid-row: auto;
+  }
+  #hero{
+    min-height: 100vh;
+  }
+  .content {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1.25em;
+    padding: 1em;
+    text-align: left;
+  }
+  .about_content img {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 40%;
+  }
+  footer {
+    min-height: 100px;
+  }
+  nav {
+    width: 80%;
+  }
+  .content {
+    width: 80%;
+  }
+}
