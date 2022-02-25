@@ -1,20 +1,31 @@
 /* tablet */
 @media screen and (min-width: 768px) {
+  h2{
+    font-size: 3em;
+  }
   blockquote {
-    margin: 2em 2em;
     font-family: "Poiret One", cursive;
     font-display: swap;
+    font-size: 1.3em;
   }
   nav {
+    grid-template-rows: 1fr;
+    min-height: 60px;
     grid-template-columns: 2fr 4fr 6fr;
+    width: 80%;
   }
-  nav:nth-child(1) {
-    min-height: auto;
+  nav .section_links{
+    align-items: center;
   }
   .logo {
     grid-column: 1/2;
+    grid-row: 1;
     justify-content: center;
     grid-row: auto;
+  }
+  .section_links{
+    grid-row: 1;
+    grid-column: 3/4;
   }
   #hero{
     min-height: 100vh;
@@ -22,23 +33,52 @@
   .content {
     position: relative;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     font-size: 1.25em;
     padding: 1em;
     text-align: left;
   }
-  .about_content img {
-    float: left;
-    margin: 0 1em 1em 0;
-    width: 40%;
+  .about_content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    font-size: 1.25em;
   }
+  .about_content p:first-child{
+    margin-top: 0;
+  }
+
+  .for-sale-photos{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 4rem;
+    direction: rtl;
+    font-size: 1.5em;
+  }
+
+  .model-about{
+    display: grid;
+  }
+  .guitars-about-blurb{
+    font-size: 1.2em;
+    margin: 0 auto;
+    text-align: justify;
+  }
+  .guitars-about-blurb small{
+    font-size: .5em;
+  }
+  .model-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    justify-content: space-around;
+  }
+  .model-photos img{
+    width: 100%;
+  }
+
   footer {
+    margin-top: 8em;
     min-height: 100px;
-  }
-  nav {
-    width: 80%;
-  }
-  .content {
-    width: 80%;
   }
 }

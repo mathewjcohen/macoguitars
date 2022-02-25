@@ -5,14 +5,15 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: white;
+  background: #f4f4f4;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-display: swap;
   font-size: 16px;
   text-align: center;
-  color: #333;
+  font-weight: 100;
+  color: #444;
 }
 @font-face {
   font-family: "Roboto", sans-serif;
@@ -32,9 +33,10 @@ em {
   font-family: "Poiret One", cursive;
   font-display: swap;
 }
-h3 {
+h2 {
+  line-height: 200%;
   font-weight: 100;
-  font-size: 0.75em;
+  text-align: center;
 }
 .em {
   font-weight: 100;
@@ -50,8 +52,9 @@ h3 {
 }
 blockquote {
   display: block;
-  font-size: 1.25em;
-  margin: 2em 1.5em;
+  font-size: 1em;
+  margin: 2em 0;
+  color: #999;
   text-align: center;
   font-family: "Poiret One", cursive;
 }
@@ -60,11 +63,6 @@ blockquote {
 }
 .four0four a:hover {
   font-size: 2em;
-}
-
-section .content h2{
-  margin-top: 2.5em;
-  line-height: 200%;
 }
 
 /* HEADER */
@@ -104,6 +102,7 @@ nav {
 
 .section_links {
   display: grid;
+  font-weight: 700;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
   gap: 1rem;
@@ -184,22 +183,30 @@ nav {
   max-width: 100%;
 }
 
-.conten .for-sale-photos p em{
+.for-sale-photos p em{
   text-align: center;
 }
 .for-sale-photos img{
   width: 100%;
 }
 
+.model-photos img{
+  max-width: 100%;
+}
+
+.guitars-about-blurb small{
+  font-size: .6em;
+  font-weight: 100;
+  color: #999;
+}
+
 /* FOOTER */
 
 footer {
-  position: relative;
-  width: 100%;
   min-height: 30px;
   padding: 2em 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: #444;
   z-index: 100;
 }
 footer .links {
@@ -235,7 +242,7 @@ footer .sub {
   justify-content: center;
   align-content: center;
   z-index: 110;
-  color: rgba(0, 0, 0, 0.75);
+  color: #444;
   cursor: zoom-out;
   padding: 2em;
 }
